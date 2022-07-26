@@ -1,1 +1,2 @@
-from .morse import encode, decode
+from .decode import decode
+from .encode import encode
