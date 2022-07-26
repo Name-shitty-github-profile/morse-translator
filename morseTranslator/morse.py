@@ -33,12 +33,12 @@ Letter: dict = {
    '-.--.':'(', '-.--.-':')', '/': ' '
 }
   
-def encode(content):
+def encode(content) -> str:
   co: str = ''
-  for letter in content.upper(): co += f'{Morse[letter.upper()]} '
+  for letter in content.upper(): co += f'{Morse[letter]} '
   return co
 
-def decode(content):
+def decode(content) -> str:
   deco: str = ''
   for thing in content.split(' '): 
     if thing != '': deco += f'{Letter[thing]}'
