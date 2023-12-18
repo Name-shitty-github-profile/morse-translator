@@ -1,7 +1,5 @@
 from .data import Letter
 def decode(content) -> str:
-  deco: str = ''
-  for thing in content.split(' '): 
-    if thing != '': 
-      deco += Letter[thing]
-  return deco.lower()
+  for encoded_char in Letter.keys():
+     content.replace(encoded_char, Letter[encoded_char])
+  return content
